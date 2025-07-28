@@ -1,9 +1,28 @@
 main {
-  background-color: red;
+  background-color: white;
   min-height: 500px;
   height: 100vh;
+  position: relative;
 }
+
+.navbar {
+  height: 56px
+}
+
 .routes {
   display: flex;
   height: max-content;
+  position: relative;
+  height: calc(100vh - 56px);
+}
+
+.loginBox {
+  height: 400px;
+  width: 400px;
+  border: 3px solid black;
+  border-radius: 30px;
+  margin: auto;
+  display: flex;
+  justify-content: center;
+  background: aliceblue;
 }
