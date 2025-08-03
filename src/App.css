@@ -16,13 +16,60 @@ main {
   height: calc(100vh - 56px);
 }
 
+
 .loginBox {
   height: 400px;
-  width: 400px;
-  border: 3px solid black;
+  width: 500px;
+  border: 3px solid darkgrey;
   border-radius: 30px;
   margin: auto;
   display: flex;
   justify-content: center;
+  align-items: center;
   background: aliceblue;
+  box-shadow: 0px 5px 10px 5px darkgrey ;
+  flex-direction: column;
+}
+
+.form {
+  width: 80%;
+}
+
+
+@keyframes example {
+  from {}
+  to {background-color: yellow;}
+}
+
+@keyframes spin {
+  0% {
+    transform: rotate(0deg);
+  }
+  100% {
+    transform: rotate(360deg);
+  }
+}
+
+@keyframes grow {
+  0% {
+    font-size: 6px;
+  }
+  100% {
+    font-size: 120px;
+  }
+}
+
+.success {
+  display: flex;
+  height: max-content;
+  width: 100%;
+  position: relative;
+  height: calc(100vh - 56px);
+  justify-content: center;
+  align-items: center;
+}
+.success > h1 {
+  font-size: 120px;
+  animation: 0.125s 8 spin, 1s 1 grow;
+  animation-timing-function: linear;
 }
