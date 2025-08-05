@@ -5,7 +5,7 @@ import { useNavigate } from 'react-router';
 
 
 function Login() {
-  const [failedLogin, setFailedLogin ] = useState(true)
+  const [failedLogin, setFailedLogin ] = useState(false)
   const loginDetails = {
     username: "user123",
     password: "password"
@@ -19,7 +19,7 @@ function Login() {
     const password = e.target[1].value
 
     if (loginDetails.username === username && loginDetails.password === password) {
-      return navigate("/success")
+      return navigate("/success") // change this to be bad for first demonstration
     } else {
       setFailedLogin(true)
     }
@@ -46,7 +46,7 @@ function Login() {
         and must not contain spaces, special characters, or emoji.` : ""}
       </Form.Text>
         </Form.Group>
-        <Button variant="primary" type="submit">
+        <Button variant="primary" type="submit" id='login'>
           Submit
         </Button>
       </Form>
